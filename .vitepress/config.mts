@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Chatty garden",
   description: "I hope I can grow in here",
+  base: './',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
