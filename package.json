@@ -1,16 +1,16 @@
 {
   "name": "chatty-garden",
   "version": "1.0.1",
-  "description": "",
+  "description": "personal blog",
   "main": "index.js",
+  "homepage": "https://yyi0708.github.io/chatty-garden/",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview --port 8080"
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview --port 8080"
   },
   "keywords": [],
-  "author": "",
+  "author": "yi.yang",
   "license": "ISC",
   "devDependencies": {
     "vitepress": "1.0.0-rc.20",
