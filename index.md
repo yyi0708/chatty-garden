@@ -3,23 +3,26 @@
 layout: home
 
 hero:
-  name: "Chatty garden"
+  name: "聊一聊"
   text: "I hope I can grow in here"
-  tagline: My great project tagline
+  tagline: A picture, a few words, to explain something
+  image:
+    src: /public/heart.svg
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /docs/font-end/markdown-examples
+      text: font-end
+      link: /docs/font-end/
     - theme: alt
-      text: API Examples
-      link: /docs/back-end/api-examples
-
+      text: back-end
+      link: /docs/back-end/
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 前端
+    details: 基础知识，常用工具库、思维思想的认知与理解(费曼学习法)
+  - title: NodeJs
+    details: 基础知识，常用工具库、思维思想的认知与理解(费曼学习法)
+  - title: Python
+    details: 基础知识，常用工具库、思维思想的认知与理解(费曼学习法)
+  - title: 随记
+    details: 读书、生活感受的写作，有兴趣是需要、值得练习✏️的
 ---
 
