@@ -5,7 +5,7 @@ export default defineConfig({
   title: "Chatty garden",
   description: "I hope I can grow in here",
   head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
-
+  base: process.env.NODE_ENV === 'production' ? '/chatty-garden/' : '/',
   lastUpdated: true,
   cleanUrls: true,
   outDir: 'dist',
