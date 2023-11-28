@@ -4,27 +4,35 @@ import { defineConfig, type DefaultTheme } from 'vitepress'
 export default defineConfig({
   title: "Chatty garden",
   description: "I hope I can grow in here",
-  head: [['link', { rel: 'icon', href: '/public/heart.svg' }]],
+  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+
+  lastUpdated: true,
+  cleanUrls: true,
+  outDir: 'dist',
+
   themeConfig: {
-    logo: '/public/heart.svg',
+    logo: '/heart.svg',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: '前端技术', link: '/docs/font-end/', activeMatch: '/docs/font-end/' },
-      { text: '后端技术', link: '/docs/back-end/', activeMatch: '/docs/back-end/' },
-      { text: '山茶随记', link: '/docs/life/', activeMatch: '/docs/life/' },
-      { text: '关于我', link: '/docs/about-me/', activeMatch: '/docs/about-me/' }
+      { text: '前端技术', link: '/docs/font-end/', activeMatch: 'font-end/' },
+      { text: '后端技术', link: '/docs/back-end/', activeMatch: '/back-end/' },
+      { text: '山茶随记', link: '/docs/life/', activeMatch: '/life/' },
+      { text: '关于我', link: '/docs/about-me/', activeMatch: '/about-me/' }
     ],
 
     sidebar: {
-      '/docs/home/': [
-        {
-          text: '首页',
-          link: '/docs/home/'
-        }
-      ],
-      '/docs/font-end/': sidebarFontEnd(),
-      '/docs/back-end/': sidebarBackEnd(),
-      '/docs/life/': sidebarLife(),
+      '/docs/font-end/': {
+        base: '/docs/font-end/',
+        items: sidebarFontEnd()
+      },
+      '/docs/back-end/': {
+        base: '/docs/back-end/',
+        items: sidebarBackEnd()
+      },
+      '/docs/life/': {
+        base: '/docs/life/',
+        items: sidebarLife()
+      },
       '/docs/about-me/': [
         {
           text: 'resume',
@@ -51,26 +59,22 @@ function sidebarFontEnd(): DefaultTheme.SidebarItem[] {
       text: '基础-进阶',
       items: [
         {
-          text: '从这里开始',
-          link: '/docs/font-end/'
-        },
-        {
           text: 'Js基础知识-进阶',
-          link: '/docs/font-end/basic/js'
+          link: 'basic/js'
         },
         {
           text: '前端模块化',
-          link: '/docs/font-end/basic/moudle'
+          link: 'basic/moudle'
         },
         {
           text: 'Ts-类型从浅入深',
-          link: '/docs/font-end/basic/ts'
+          link: 'basic/ts'
         },{
           text: 'JS多线程的了解',
-          link: '/docs/font-end/basic/js'
+          link: 'basic/multithreading'
         },{
           text: '编程风格AOP/OOP/POP',
-          link: '/docs/font-end/basic/program'
+          link: 'basic/program'
         }
       ]
     },
@@ -79,31 +83,31 @@ function sidebarFontEnd(): DefaultTheme.SidebarItem[] {
       items: [
         {
           text: '包管理器',
-          link: '/docs/font-end/project/pkgManage'
+          link: 'project/pkgManage'
         },{
           text: '单元-组件-e2e测试',
-          link: '/docs/font-end/project/test'
+          link: 'project/test'
         },
         {
           text: '开发工作流选择',
-          link: '/docs/font-end/project/workflow'
+          link: 'project/workflow'
         },
         {
           text: '脚手架',
-          link: '/docs/font-end/project/cli'
+          link: 'project/cli'
         },
         {
           text: '构建工具',
-          link: '/docs/font-end/project/build'
+          link: 'project/build'
         },{
           text: '组件化',
-          link: '/docs/font-end/project/compents'
+          link: 'project/compents'
         },{
           text: '微前端',
-          link: '/docs/font-end/project/mico-font-end'
+          link: 'project/mico-font-end'
         },{
           text: '部署方式',
-          link: '/docs/font-end/project/deploy'
+          link: 'project/deploy'
         }
       ]
     },
@@ -112,7 +116,7 @@ function sidebarFontEnd(): DefaultTheme.SidebarItem[] {
       items: [
         {
           text: '获取当前文件路径',
-          link: '/docs/font-end/skill/getCurrentPath'
+          link: 'skill/getCurrentPath'
         }
       ]
     },
@@ -121,7 +125,7 @@ function sidebarFontEnd(): DefaultTheme.SidebarItem[] {
       items: [
         {
           text: 'sample-cli',
-          link: '/docs/font-end/flight/sample-cli'
+          link: 'flight/sample-cli'
         }
       ]
     }
@@ -136,19 +140,19 @@ function sidebarBackEnd(): DefaultTheme.SidebarItem[] {
       items: [
         {
           text: 'NestJs',
-          link: '/docs/back-end/node/nest'
+          link: 'node/nest'
         },
         {
           text: 'Express',
-          link: '/docs/back-end/node/express'
+          link: 'node/express'
         },
         {
           text: 'ORM框架',
-          link: '/docs/back-end/node/orm'
+          link: 'node/orm'
         },
         {
           text: '通过PostgreSQL了解数据库',
-          link: '/docs/back-end/node/sql'
+          link: 'node/sql'
         },
       ]
     },
@@ -157,17 +161,17 @@ function sidebarBackEnd(): DefaultTheme.SidebarItem[] {
       items: [
         {
           text: 'python基础-进阶',
-          link: '/docs/back-end/python/basic'
+          link: 'python/basic'
         },
         {
           text: 'Django基础-进阶',
-          link: '/docs/back-end/python/django'
+          link: 'python/django'
         },{
           text: 'FastAPI基础-进阶',
-          link: '/docs/back-end/python/fastapi'
+          link: 'python/fastapi'
         },{
           text: '爬虫',
-          link: '/docs/back-end/python/crawel'
+          link: 'python/crawel'
         }
       ]
     },
@@ -176,7 +180,7 @@ function sidebarBackEnd(): DefaultTheme.SidebarItem[] {
       items: [
         {
           text: '工厂模式',
-          link: '/docs/back-end/mode/factory'
+          link: 'mode/factory'
         }
       ]
     },
@@ -185,7 +189,7 @@ function sidebarBackEnd(): DefaultTheme.SidebarItem[] {
       items: [
         {
           text: 'Docker基础使用',
-          link: '/docs/back-end/docker/basic'
+          link: 'docker/basic'
         }
       ]
     },
@@ -194,7 +198,7 @@ function sidebarBackEnd(): DefaultTheme.SidebarItem[] {
       items: [
         {
           text: 'lottery',
-          link: '/docs/back-end/fight/lottery'
+          link: 'fight/lottery'
         }
       ]
     }
@@ -209,7 +213,7 @@ function sidebarLife(): DefaultTheme.SidebarItem[] {
       items: [
         {
           text: '易经',
-          link: '/docs/life/old-philosophy/yijin'
+          link: 'old-philosophy/yijin'
         }
       ]
     },
@@ -218,7 +222,7 @@ function sidebarLife(): DefaultTheme.SidebarItem[] {
       items: [
         {
           text: 'Demo',
-          link: '/docs/life/acticle/demo.md'
+          link: 'acticle/demo.md'
         }
       ]
     }

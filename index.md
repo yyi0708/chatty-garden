@@ -7,7 +7,7 @@ hero:
   text: "I hope I can grow in here"
   tagline: A picture, a few words, to explain something
   image:
-    src: /public/heart.svg
+    src: /heart.svg
   actions:
     - theme: brand
       text: font-end
