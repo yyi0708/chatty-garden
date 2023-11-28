@@ -47,7 +47,7 @@ export default defineConfig({
 
     footer: {
       message: '你如果追求完美，将永远无法感到满足（完美主义陷阱）。 援引文章：<a href="https://www.163.com/dy/article/G7HM1IUS0541HJGS.html" style="color:blue;">有一种优秀，叫做“不追求完美”</a>',
-      copyright: '<span style="color:red;">悟：人永远没有准备充分的时候，只有准备差不多了，敢想敢做，然后上场，去收获此阶段的成果。</span>'
+      copyright: '<span style="color:red;">人永远没有准备充分的时候，只有准备差不多了，敢想敢做，然后上场，去收获此阶段的成果。</span>'
     }
   }
 })
