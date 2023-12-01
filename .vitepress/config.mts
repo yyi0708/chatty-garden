@@ -5,6 +5,7 @@ export default defineConfig({
   title: "Chatty garden",
   description: "I hope I can grow in here",
   head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+  // @ts-ignore
   base: process.env.NODE_ENV === 'production' ? '/chatty-garden/' : '/',
   lastUpdated: true,
   cleanUrls: true,
@@ -115,9 +116,12 @@ function sidebarFontEnd(): DefaultTheme.SidebarItem[] {
       text: '小片段技巧',
       items: [
         {
-          text: '获取当前文件路径',
+          text: '获取文件路径',
           link: 'skill/getCurrentPath'
-        }
+        },{
+          text: '自动切换node环境',
+          link: 'skill/autoSwitchEnv'
+        },
       ]
     },
     {
@@ -172,6 +176,12 @@ function sidebarBackEnd(): DefaultTheme.SidebarItem[] {
         },{
           text: '爬虫',
           link: 'python/crawel'
+        },{
+          text: 'redis',
+          link: 'python/redis'
+        },{
+          text: 'SQLAlchemy的使用',
+          link: 'python/sqlalchemy'
         }
       ]
     },
