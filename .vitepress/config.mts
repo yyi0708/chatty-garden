@@ -4,7 +4,7 @@ import { defineConfig, type DefaultTheme } from 'vitepress'
 export default defineConfig({
   title: "Chatty garden",
   description: "I hope I can grow in here",
-  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+  head: [['link', { rel: 'icon', href: '/chatty-garden/favicon.ico' }]],
   // @ts-ignore
   base: process.env.NODE_ENV === 'production' ? '/chatty-garden/' : '/',
   lastUpdated: true,
