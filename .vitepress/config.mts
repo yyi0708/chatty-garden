@@ -4,7 +4,8 @@ import { defineConfig, type DefaultTheme } from 'vitepress'
 export default defineConfig({
   title: "Chatty garden",
   description: "I hope I can grow in here",
-  head: [['link', { rel: 'icon', href: '/chatty-garden/favicon.ico' }]],
+  // @ts-ignore
+  head: [['link', { rel: 'icon', href: process.env.NODE_ENV === 'production' ? '/chatty-garden/favicon.ico' : '/favicon.ico' }]],
   // @ts-ignore
   base: process.env.NODE_ENV === 'production' ? '/chatty-garden/' : '/',
   lastUpdated: true,
@@ -177,7 +178,7 @@ function sidebarBackEnd(): DefaultTheme.SidebarItem[] {
           text: '爬虫',
           link: 'python/crawel'
         },{
-          text: 'redis',
+          text: 'Redis',
           link: 'python/redis'
         },{
           text: 'SQLAlchemy的使用',

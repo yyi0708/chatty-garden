@@ -91,7 +91,8 @@ ECMAScript模块是JavaScript语言的标准模块，因此TypeScript也支持EC
 
 模块通过import语句来声明对其他模块的依赖；同时，通过export语句将模块内的声明公开给其他模块使用。
 
-示例代码如下：
+## 示例代码
+
 ```ts
 // @filename: index.ts
 import { valueOfPi } from "./constants";
