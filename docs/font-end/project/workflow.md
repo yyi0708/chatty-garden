@@ -12,6 +12,8 @@
 
 开发代码工作中，希望需要辅助工具/库，保证代码质量、统一风格，约束规定提交信息，及推送库之前运行测试用例, 此流程目的，避免🚫💩进入你的代码仓库,不便于后期维护。
 
+其中，还有其他优秀库，可以进行替换。
+
 
 ## 如上图资源地址：
 * [eslint](https://github.com/eslint/eslint) : Find and fix problems in your JavaScript code.
@@ -20,4 +22,6 @@
 * [lint-staged](https://github.com/okonet/lint-staged):    🚫💩 — Run linters on git staged files
 * [commitlint](https://github.com/conventional-changelog/commitlint) : 📓 Lint commit messages
 * [commitizen](https://github.com/commitizen-tools/commitizen):  Create committing rules for projects 🚀 auto bump versions ⬆️ and auto changelog generation 📂
+* [cz-git](https://github.com/Zhengqbbb/cz-git) cz-git | czg 🛠️ DX first and more engineered, lightweight, customizable, standard output format Commitizen adapter and CLI
 * [standard-version](https://github.com/conventional-changelog/standard-version):   🏆 Automate versioning and CHANGELOG generation, with semver.org and conventionalcommits.org
+* [bumpp](https://github.com/antfu/bumpp) Interactive CLI that bumps your version numbers and more
