@@ -11,10 +11,10 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
-    router.onAfterRouteChanged = (to: string) => {
-      if (window && Object.prototype.hasOwnProperty.call(window, '_hmt') && typeof window['_hmt'] !== "undefined"){
-        window['_hmt'].push(["_trackPageview", to]);
-      }
-     }
+    // router.onAfterRouteChanged = (to: string) => {
+    //   if (window && Object.prototype.hasOwnProperty.call(window, '_hmt') && typeof window['_hmt'] !== "undefined"){
+    //     window['_hmt'].push(["_trackPageview", to]);
+    //   }
+    // }
   }
 }
