@@ -6,17 +6,17 @@ export default defineConfig({
   description: "I hope I can grow in here",
   // @ts-ignore
   head: [['link', { rel: 'icon', href: process.env.NODE_ENV === 'production' ? '/chatty-garden/favicon.ico' : '/favicon.ico' }],
-[
-  'script',
-  {},
-  `var _hmt = _hmt || [];
-  (function() {
-    var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?d94e0cd3c25f21f1ac99898310082b5a";
-    var s = document.getElementsByTagName("script")[0]; 
-    s.parentNode.insertBefore(hm, s);
-  })();`
-]],
+  [
+    'script',
+    {},
+    `var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?d94e0cd3c25f21f1ac99898310082b5a";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();`
+  ]],
   // @ts-ignore
   base: process.env.NODE_ENV === 'production' ? '/chatty-garden/' : '/',
   lastUpdated: true,
