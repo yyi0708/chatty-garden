@@ -132,6 +132,7 @@ function sidebarFontEnd(): DefaultTheme.SidebarItem[] {
     },
     {
       text: '小片段技巧',
+      collapsed: true,
       items: [
         {
           text: '获取文件路径',
@@ -142,6 +143,9 @@ function sidebarFontEnd(): DefaultTheme.SidebarItem[] {
         },{
           text: '控制台调试vue3实战小技巧',
           link: 'skill/vue3Ref'
+        },{
+          text: 'Blob/file/...文件格式转换',
+          link: 'skill/fileFormat'
         },
       ]
     },
