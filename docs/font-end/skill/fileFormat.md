@@ -4,6 +4,7 @@
 ::: warning
 1. ArrayBuffer、File、Blob、base64、string类型格式转换
 2. 文件编码类型指定与转换(`utf-8` `gbk`等)
+3. `File` `Blob` `ArrayBuffer`等格式定义
 :::
 
 
