@@ -5,7 +5,7 @@
 其中主要区分`package.json`中的`type`, 默认为`commonjs`规范，或者可选`module`ESM模块规范。
 
 **commonjs**
-使用 `__dirname` 访问当前目录并将相对路径解析为绝对路径。
+* 使用 `__dirname` 访问当前目录并将相对路径解析为绝对路径。
 ```js
 import { resolve } from 'path';
 
